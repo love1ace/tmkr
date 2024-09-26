@@ -2,20 +2,20 @@
 const fs = require('fs');
 const path = require('path');
 
-// .github 디렉토리가 있는지 확인하고 없으면 생성
+// Check if .github directory exists, if not, create it
 const githubDir = path.join(process.cwd(), '.github');
 if (!fs.existsSync(githubDir)) {
   fs.mkdirSync(githubDir);
-  console.log('.github 디렉토리가 생성되었습니다.');
+  console.log('.github directory has been created.');
 }
 
-// ISSUE_TEMPLATE 디렉토리 생성
+// Create ISSUE_TEMPLATE directory
 const issueDir = path.join(githubDir, 'ISSUE_TEMPLATE');
 if (!fs.existsSync(issueDir)) {
   fs.mkdirSync(issueDir);
 }
 
-// PR 템플릿
+// PR template
 const prTemplate = `# Overview
 
 <!--
@@ -29,7 +29,7 @@ const prTemplate = `# Overview
  -->
 `;
 
-// 이슈 템플릿 (YAML)
+// Issue templates (YAML)
 const bugYamlTemplate = `name: bug
 description: Report a bug
 labels: [bug]
@@ -67,9 +67,9 @@ body:
       required: true
 `;
 
-// 파일 생성
+// Write files
 fs.writeFileSync(path.join(issueDir, 'bug.yml'), bugYamlTemplate);
 fs.writeFileSync(path.join(issueDir, 'feature.yml'), featureYamlTemplate);
 fs.writeFileSync(path.join(githubDir, 'pull_request_template.md'), prTemplate);
 
-console.log('템플릿이 성공적으로 생성되었습니다.');
+console.log('Templates have been successfully created.');
