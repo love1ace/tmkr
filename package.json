@@ -1,0 +1,38 @@
+{
+  "name": "tmkr",
+  "version": "1.0.0",
+  "description": "1 second to create github issue or pr",
+  "main": "bin/index.js",
+  "license": "MIT",
+  "author": "love1ace",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/love1ace/tmkr.git"
+  },
+  "keywords": [
+    "tmkr",
+    "github",
+    "issue",
+    "pr",
+    "front-end",
+    "back-end",
+    "love1ace"
+  ],
+  "bugs": {
+    "url": "https://github.com/love1ace/tmkr/issues"
+  },
+  "files": [
+    "bin/index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "homepage": "https://github.com/love1ace/tmkr#readme",
+  "bin": {
+    "tmkr": "bin/index.js"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "start": "node bin/index.js"
+  }
+}
